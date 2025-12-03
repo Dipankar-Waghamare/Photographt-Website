@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEDMW003 | Home</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./img/logo1.png" alt="Dip Photography Logo">
+            </a>
+
+            <input class="search-box" type="text" placeholder="search Here...">
+            <button class="button-class">search</button>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#nature-clicks">Nature Clicks</a>
+                <a href="#about">About Us</a>
+                <a href="#founder">Founder</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <h1>THEDMW Photography</h1>
+        <p>Capturing moments that last forever</p>
+    </header><br><br>
+
+    <!-- Scrollable Photo Gallery -->
+    <!-- <section id="photos" class="photo-gallery">
+        <h2>Nature Clicks</h2>
+        <div class="scroll-gallery">
+            <img src="./Img/powai lake.jpg" alt="Powai Lake">
+            <img src="./Img/karjat.jpg" alt="Karjat">
+            <img src="./Img/colaba boat.JPG" alt="Coloba">
+            <img src="./Img/gate way india.jpg" alt="Gateway of India">
+             <img src="./Img/IMG_20230608_191940.jpg" alt="Karjat">
+        </div>
+    </section> -->
+
+            <section id="nature-clicks" class="nature-clicks">
+                <h3>Nature Clicks</h3><br>
+
+                <div class="scroll-container">
+                    <button class="nav-btn left" onclick="slideLeft()">❮</button>
+                    <div class="image-track" id="imageTrack">
+
+                        <img src="./Img/powai lake.jpg" alt="Powai Lake">
+                        <img src="./Img/karjat.jpg" alt="Karjat">
+                        <img src="./Img/colaba boat.JPG" alt="Coloba">
+                        <img src="./Img/gate way india.jpg" alt="Gate way of India">
+                        <img src="./img/IMG_20230608_191940.jpg" alt="Colaba">
+                        <img src="./img/IMG_20241010_080657.jpg" alt="Karjat road">
+                        <img src="./img/IMG_20241030_075127.jpg" alt="Karjat Railway Track">
+                        <img src="./img/IMG_20241030_081945.jpg" alt="Karjat Road Bridge">
+                    </div>
+                     <button class="nav-btn right" onclick="slideRight()">❯</button>
+                </div>
+            </section>
+
+
+    <!-- About Us -->
+    <section id="about" class="about-us">
+        <h2>About Us</h2>
+        <p>
+            At <strong>Dip Photography</strong>, we believe every photograph tells a story — a frozen moment filled with emotion, beauty, and meaning.
+            Founded by <strong>Dipankar Maruti Waghamare</strong>, our passion lies in capturing the world through a creative lens — from breathtaking landscapes and vibrant city life to heartfelt portraits and candid moments.
+        </p>
+        <img src="./Img/logo.jpg" alt="Dip Photography Logo">
+    </section>
+
+    <!-- Our Founder -->
+    <section id="founder" class="founder">
+        <h2>Founder</h2>
+        <img src="./Img/Dip profile1.png" alt="Dip" height="300" width=250">
+        <h3>Dipankar Maruti Waghamare</h3>
+        <p>– A passionate developer and creative photographer.
+        With a perfect blend of technical expertise and artistic vision, he brings life to every project.
+        Precision in coding and emotion in photography – that’s what makes his work unique.
+        Inspired by nature and art from a young age, he created a platform where technology meets photography.</p>
+        <div class="social-links">
+            <a href="http://www.youtube.com/@thedmw003" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/thedmw003" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/dipankar-waghamare-861488236" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <!-- <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contactus-form-container">
+            <form>
+                <input class="formfield" type="text" name="name" placeholder="Enter your name" />
+                <input class="formfield" type="email" name="email" placeholder="Enter your email address" />
+                <input class="formfield" type="text" name="subject" placeholder="Enter your subject" />
+                <textarea name="message" class="formfield formfield-textarea" placeholder="Enter your message"></textarea>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section> -->
+
+ <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+
+    <div class="contactus-form-container">
+        <form id="contactForm">
+
+            <input class="formfield" type="text" name="name" placeholder="Enter your name" required>
+
+            <input class="formfield" type="email" name="email" placeholder="Enter your email address" required>
+
+            <input class="formfield" type="text" name="subject" placeholder="Enter your subject" required>
+
+            <textarea name="message" class="formfield formfield-textarea" placeholder="Enter your message" required></textarea>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+
+            <p id="status"></p>
+
+        </form>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        
+        <div class="footer-links">
+            <a href="#">FAQ</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">2025 THEDMW003 | All Rights Reserved</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+     <script> 
+    const track = document.getElementById("imageTrack");
+
+function slideLeft() {
+    track.scrollLeft -= 320;
+}
+
+function slideRight() {
+    track.scrollLeft += 320;
+}
+
+    </script>
+    
+    <script>
+(function(){
+    emailjs.init("YOUR_PUBLIC_KEY"); // replace
+})();
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
